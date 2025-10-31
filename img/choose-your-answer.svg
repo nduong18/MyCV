@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff8a2b"/>
+      <stop offset="1" stop-color="#ff6a00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#fff6f1"/>
+  <g transform="translate(80,80)">
+    <rect width="1040" height="515" rx="24" fill="url(#g)" opacity="0.12"/>
+    <text x="520" y="220" font-family="Poppins, Inter, Arial" font-size="48" fill="#ff6a00" text-anchor="middle">Choose Your Answer</text>
+    <text x="520" y="300" font-family="Inter, Arial" font-size="20" fill="#6b7680" text-anchor="middle">Playable demo — Cocos Creator</text>
+    <g transform="translate(360,340)">
+      <rect x="-120" y="-24" width="240" height="48" rx="10" fill="#fff" opacity="0.9"/>
+      <path d="M-40 -6 L40 0 L-40 6 z" fill="#ff6a00" transform="translate(-20,0)"/>
+    </g>
+  </g>
+</svg>

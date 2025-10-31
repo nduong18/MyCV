@@ -1,0 +1,568 @@
+/* White / Bright theme */
+:root {
+  --bg: #ffffff; /* page background */
+  --container-bg: #ffffff;
+  --card-bg: #fff6f1; /* very light warm */
+  --accent: #ff6a00; /* primary orange */
+  --accent-2: #ff8a2b; /* orange 2 */
+  --muted: #6b7680; /* muted gray */
+  --text: #072034; /* dark navy for headings */
+  --btn-text: #ffffff;
+  --border: #e6eefc;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand h1 {
+  margin: 6px 0 0;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.brand .role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 18px;
+}
+.nav a:hover {
+  color: var(--accent-2);
+}
+
+.hero {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 36px 0;
+}
+.hero-left h2 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.hero-left p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: var(--btn-text);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 14px 36px rgba(255, 106, 0, 0.12);
+}
+.avatar {
+  width: 160px;
+  border-radius: 12px;
+  border: 4px solid var(--border);
+  background: var(--card-bg);
+  display: block;
+}
+
+.section {
+  padding: 28px 0;
+}
+.section-title {
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+.muted {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills-list li {
+  background: var(--card-bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(10, 38, 80, 0.04);
+  border: 1px solid var(--border);
+}
+.thumb img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.info {
+  padding: 12px;
+}
+.info h4 {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.card .actions {
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-ghost:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 106, 0, 0.06),
+    rgba(255, 138, 43, 0.06)
+  );
+  color: var(--btn-text);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* small helper */
+.muted-small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* CV section styles */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 8px;
+}
+.cv-card {
+  background: transparent;
+  padding: 0;
+}
+.cv-summary {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.cv-experience {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.cv-item {
+  margin-bottom: 14px;
+}
+.cv-item h5 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 700;
+}
+.cv-item .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.download-resume {
+  display: inline-block;
+  margin-top: 10px;
+}
+@media (max-width: 720px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product-style adjustments (The One Game Studio-like) */
+.hero {
+  position: relative;
+  padding: 56px 0 72px;
+  background: linear-gradient(180deg, rgba(255, 106, 0, 0.06), transparent);
+  min-height: 340px;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.hero-left h2 {
+  font-size: 2.1rem;
+  letter-spacing: -0.5px;
+}
+
+/* Hero layout: left content and right avatar card */
+.hero-left {
+  flex: 1 1 560px;
+  max-width: 720px;
+  padding-right: 12px;
+  z-index: 2;
+}
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 360px;
+  z-index: 2;
+}
+.avatar {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(255, 106, 0, 0.08);
+  border: 8px solid rgba(255, 255, 255, 0.6);
+  background: var(--card-bg);
+  padding: 10px;
+}
+
+/* decorative accent behind avatar */
+.hero-accent {
+  position: absolute;
+  right: 6%;
+  top: 10%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 138, 43, 0.14),
+    rgba(255, 106, 0, 0.06)
+  );
+  filter: blur(28px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 920px) {
+  .hero-left {
+    flex: 1 1 100%;
+  }
+  .hero-right {
+    flex: 1 1 100%;
+    order: -1;
+    margin-bottom: 18px;
+  }
+  .hero-accent {
+    display: none;
+  }
+}
+.section-title {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card visuals: larger thumb, overlay play button */
+.card {
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.28s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(255, 106, 0, 0.12);
+}
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.12));
+  pointer-events: none;
+}
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.play-btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 12px 34px rgba(255, 106, 0, 0.14);
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  transform: translateY(6px);
+  transition: transform 0.22s, opacity 0.22s;
+}
+.play-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--btn-text);
+  margin-left: 4px;
+}
+.card:hover .play-btn {
+  transform: translateY(0) scale(1.02);
+}
+
+.click-text {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  color: var(--btn-text);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s, transform 0.22s;
+}
+.card:hover .click-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* make actions compact and aligned */
+.card .actions {
+  justify-content: flex-end;
+}
+
+/* responsive tweaks */
+@media (max-width: 720px) {
+  .hero-left h2 {
+    font-size: 1.5rem;
+  }
+  .play-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Responsive improvements */
+/* make hero content wrap and scale */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero-left,
+.hero-right {
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
+/* Thumbnails keep aspect ratio and scale with card width */
+.thumb {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play button scales with viewport / card size */
+.play-btn {
+  width: clamp(48px, 8vw, 68px);
+  height: clamp(48px, 8vw, 68px);
+  border-width: clamp(2px, 0.4vw, 4px);
+}
+.play-btn svg {
+  width: clamp(18px, 3.2vw, 28px);
+  height: clamp(18px, 3.2vw, 28px);
+}
+.click-text {
+  font-size: clamp(10px, 1.6vw, 12px);
+  padding: 6px 8px;
+}
+
+/* Grid responsiveness: ensure cards don't get too narrow and add gutters */
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* CV: ensure stack on narrow screens */
+@media (max-width: 920px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-left,
+  .hero-right {
+    min-width: 200px;
+  }
+}
+
+/* Small screens: reduce paddings and sizes */
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+  .hero {
+    padding: 20px 0;
+  }
+  .info {
+    padding: 10px;
+  }
+  .btn {
+    padding: 8px 12px;
+  }
+}
+
+/* Game modal (iframe) */
+.game-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 16, 24, 0.6);
+  z-index: 9999;
+  padding: 20px;
+}
+.game-modal.open {
+  display: flex;
+}
+.game-modal-panel {
+  /* fixed embedded window requested by user */
+  width: 340px;
+  height: 640px;
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 40px);
+  background: #0b1220;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.6);
+}
+.game-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 106, 0, 0.08),
+    rgba(255, 138, 43, 0.06)
+  );
+}
+.game-modal-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.game-modal-header .close {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.game-modal-body {
+  flex: 1;
+  background: #000;
+}
+.game-modal-body iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* Mobile fallback: make modal nearly full-screen on small viewports */
+@media (max-width: 420px) {
+  .game-modal-panel {
+    width: calc(100% - 24px);
+    height: calc(100% - 40px);
+    border-radius: 8px;
+  }
+}
