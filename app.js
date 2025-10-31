@@ -30,7 +30,7 @@ const games = [
     desc: "Choose the correct answer from multiple choices. Use tween",
     thumb: "img/choose-your-answer.svg",
     play: "https://choose-your-answer.vercel.app/",
-    source: "https://github.com/nduong18/choose-your-answer",
+    source: "https://github.com/nduong18/choose-your-answer-source",
   },
 ];
 
