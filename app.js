@@ -29,7 +29,7 @@ const games = [
     title: "Choose Your Answer",
     desc: "Playable ads / mini-game built with Cocos Creator. Copy web-build to 'games/choose-your-answer/'.",
     thumb: "img/choose-your-answer.svg",
-    play: "games/choose-your-answer/index.html",
+    play: "https://choose-your-answer.vercel.app/",
     source: "",
   },
 ];
