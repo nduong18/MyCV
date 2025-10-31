@@ -30,7 +30,7 @@ const games = [
     desc: "Playable ads / mini-game built with Cocos Creator. Copy web-build to 'games/choose-your-answer/'.",
     thumb: "img/choose-your-answer.svg",
     play: "https://choose-your-answer.vercel.app/",
-    source: "",
+    source: "https://github.com/nduong18/choose-your-answer",
   },
 ];
 
