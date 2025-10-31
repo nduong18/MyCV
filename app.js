@@ -11,7 +11,7 @@ const games = [
   {
     id: "this-or-that",
     title: "This or That",
-    desc: "Chọn một trong hai lựa chọn. Simple logic game.",
+    desc: "Choose between two options. Simple UI system.",
     thumb: "img/this-or-that.svg",
     play: "games/this-or-that/index.html",
     source: "https://github.com/yourname/this-or-that",
@@ -27,7 +27,7 @@ const games = [
   {
     id: "choose-your-answer",
     title: "Choose Your Answer",
-    desc: "Playable ads / mini-game built with Cocos Creator. Copy web-build to 'games/choose-your-answer/'.",
+    desc: "Choose the correct answer from multiple choices. Use tween",
     thumb: "img/choose-your-answer.svg",
     play: "https://choose-your-answer.vercel.app/",
     source: "https://github.com/nduong18/choose-your-answer",
@@ -45,28 +45,7 @@ function createCard(g) {
   img.alt = g.title;
   thumb.appendChild(img);
 
-  // play overlay (circle button + click label)
-  const overlay = document.createElement("div");
-  overlay.className = "play-overlay";
-  const playLink = document.createElement("a");
-  playLink.className = "play-btn";
-  playLink.href = g.play || "#";
-  // open as popup from JS instead of default _blank navigation
-  playLink.removeAttribute && playLink.removeAttribute("target");
-  playLink.addEventListener("click", (ev) => {
-    ev.preventDefault();
-    openGameModal(g.play, g.title);
-  });
-  // inline SVG play icon
-  playLink.innerHTML =
-    '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>';
-  overlay.appendChild(playLink);
-  thumb.appendChild(overlay);
-
-  const clickText = document.createElement("div");
-  clickText.className = "click-text";
-  clickText.textContent = "Click to play";
-  thumb.appendChild(clickText);
+  // (play overlay/button removed)
 
   const info = document.createElement("div");
   info.className = "info";
