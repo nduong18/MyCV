@@ -13,8 +13,8 @@ const games = [
     title: "This or That",
     desc: "Choose between two options. Simple UI system.",
     thumb: "img/this-or-that.svg",
-    play: "games/this-or-that/index.html",
-    source: "https://github.com/yourname/this-or-that",
+    play: "https://this-or-that-jet.vercel.app/",
+    source: "https://github.com/yourname/this-or-that-build",
   },
   {
     id: "coloring-challenge",
